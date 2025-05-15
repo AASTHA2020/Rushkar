@@ -1,46 +1,144 @@
-# Getting Started with Create React App
+# Employee Listing System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing employee information with a modern React frontend and Node.js backend.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+The project is divided into two main directories:
 
-### `npm start`
+### Frontend (`/frontend`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Built with React and JavaScript (JSX)
+- Uses Material-UI (MUI) for the component library
+- Implements modern React practices with functional components
+- Features a responsive and user-friendly interface
+- Uses React Router for navigation
+- Implements Material-UI theming
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Backend (`/backend`)
 
-### `npm test`
+- Node.js with Express.js server
+- MongoDB database with Mongoose ODM
+- RESTful API architecture
+- Includes data seeding functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React 19
+- JavaScript (JSX)
+- Material-UI (MUI) v7
+- React Router DOM v7
+- Axios for API calls
+- Lodash for utility functions
+- Emotion for styled components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- CORS for cross-origin requests
+- Dotenv for environment variables
+- Faker for data seeding
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn package manager
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repository
 
-## Learn More
+```bash
+git clone <repository-url>
+cd Rushkar_Assignment
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install Frontend Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd frontend
+npm install
+```
+
+3. Install Backend Dependencies
+
+```bash
+cd ../backend
+npm install
+```
+
+### Environment Setup
+
+1. Create a `.env` file in the backend directory with the following variables:
+
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/employee-listing
+```
+
+### Running the Application
+
+1. Start the Backend Server
+
+```bash
+cd backend
+npm start
+```
+
+2. (Optional) Seed the Database with Sample Data
+
+```bash
+cd backend
+npm run seed
+```
+
+3. Start the Frontend Development Server
+
+```bash
+cd frontend
+npm start
+```
+
+The application will be available at:
+
+- Backend API: http://localhost:5000
+
+## Features
+
+- Employee listing and management
+- Search and filter functionality
+- Responsive design
+- Data persistence
+- RESTful API endpoints
+
+## API Endpoints
+
+The backend provides the following RESTful endpoints:
+
+- GET /api/employees - Get all employees
+- GET /api/employees/:id - Get employee by ID
+
+## Development
+
+### Frontend Development
+
+- Located in `/frontend/src`
+- Components are organized in the `components` directory
+- API services are in the `services` directory
+- Utility functions in the `utils` directory
+
+### Backend Development
+
+- Located in `/backend/src`
+- Routes are defined in the `routes` directory
+- Database models in the `models` directory
+- Seeding scripts in the `scripts` directory
+
+
